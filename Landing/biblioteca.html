@@ -1,521 +1,373 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <title>UPNTAB</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
+  <head>
+    <meta charset="utf-8" />
+    <title>Repositorios digitales - UPNTAB</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="img/favicon.ico" rel="icon" />
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&family=Open+Sans&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Icon Font Stylesheet -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
-    
-    
-    <style>
-    /* ===== NAVBAR PERSONALIZADA ===== */
+    <link href="css/style.css" rel="stylesheet" />
+  </head>
 
-/* Separar la barra del logo */
-.navbar .navbar-nav {
-    margin-left: 200px; /* Ajusta según el tamaño del logo */
-}
-
-/* Color normal de los links */
-.navbar .navbar-nav .nav-link {
-    color: #ffffff !important;   /* Letras blancas */
-    font-weight: 500;
-    padding: 15px 18px;
-    transition: all 0.3s ease;
-}
-
-/* Hover en links */
-.navbar .navbar-nav .nav-link:hover {
-    color: #ffd700 !important;   /* Dorado */
-    background-color: rgba(255, 255, 255, 0.15);
-    border-radius: 6px;
-}
-
-/* Link activo (página actual) */
-.navbar .navbar-nav .nav-link.active {
-    color: #00e5ff !important;   /* Azul claro */
-    border-bottom: 3px solid #00e5ff;
-}
-
-/* Dropdown items */
-.dropdown-menu .dropdown-item {
-    color: #333;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-/* Hover en dropdown */
-.dropdown-menu .dropdown-item:hover {
-    background-color: #00e5ff;
-    color: #ffffff;
-}
-</style>
-
-
-</head>
-
-<body>
+  <body>
     <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-border text-primary"
+        role="status"
+        style="width: 3rem; height: 3rem"
+      ></div>
     </div>
     <!-- Spinner End -->
 
-
-     
-
-
-    <!-- Navbar Start -->
-    <div class="container-fluid bg-secondary px-0 wow fadeIn" data-wow-delay="0.1s">
-        <div class="nav-bar">
-            <nav class="navbar navbar-expand-lg bg-primary navbar-dark px-4 py-lg-0">
-                <h4 class="d-lg-none m-0">Menu</h4>
-                <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
-                    data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarCollapse">
-                    <div class="navbar-nav me-auto">
-                        <!-- boton inicio -->
-                        <a href="index.html" class="nav-item nav-link active">Inicio</a>
-
-
-                        <!-- despegable UPN 271 -->
-                        <div class="nav-item dropdown">
-                            <a href="#!" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Direccion</a>
-
-                            <div class="dropdown-menu bg-light m-0">
-                                <a href="event.html" class="dropdown-item">Administracion</a>
-                                <a href="feature.html" class="dropdown-item">Normatividad</a>
-                               
-                            </div>
-                        </div>
-                        
-                         <!-- despegable licenciaturas -->
-                        <div class="nav-item dropdown">
-                            <a href="#!" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Licenciaturas</a>
-
-                            <div class="dropdown-menu bg-light m-0">
-                                <a href="event.html" class="dropdown-item">Licenciatura en Intervencion Educativa</a>
-                                <a href="feature.html" class="dropdown-item">Licenciatura en Pedagogía</a>
-                                <a href="feature.html" class="dropdown-item">Convocatoria para el Programa de Apoyo Académico de Pares </a>
-                            </div>
-                        </div>
-
-                        <!-- despegable Posgrado -->
-                        <div class="nav-item dropdown">
-                            <a href="#!" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Posgrado</a>
-
-                            <div class="dropdown-menu bg-light m-0">
-                                <a href="event.html" class="dropdown-item">Maestria en Educacion</a>
-                                <a href="feature.html" class="dropdown-item">Maestria en Gestion Educativa</a>
-                                <a href="feature.html" class="dropdown-item">Maestría en Integracion Educativa</a>
-                                <a href="feature.html" class="dropdown-item">Formato Curriculum Vitae</a>
-                                <a href="feature.html" class="dropdown-item">Formato Carta de Exposicion de Motivos</a>
-                            </div>
-                        </div>
-
-                         <!-- despegable Servicios Escolares -->
-                        <div class="nav-item dropdown">
-                            <a href="#!" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Servicios escolares</a>
-
-                            <div class="dropdown-menu bg-light m-0">
-                                <a href="event.html" class="dropdown-item">Reinscripciones</a>
-                                <a href="feature.html" class="dropdown-item">Guia Preinscripcion Licenciatura</a>
-                                <a href="feature.html" class="dropdown-item">Formulario Preinscripcion Licenciaturas</a>
-                                <a href="feature.html" class="dropdown-item">Guia preinscripcion posgrado</a>
-                                <a href="feature.html" class="dropdown-item">Correo para tramites</a>
-                            </div>
-                        </div>
-
-                        <!-- despegable Titulacion-->
-                        <div class="nav-item dropdown">
-                            <a href="#!" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Titulacion</a>
-
-                            <div class="dropdown-menu bg-light m-0">
-                                <a href="event.html" class="dropdown-item">Procedimiento de Titulacion</a>
-                                <a href="feature.html" class="dropdown-item">Normatividad de Taller de Titulacion</a>
-                                
-                            </div>
-                        </div>
-
-                        <a href="biblioteca.html" class="nav-item nav-link">Biblioteca Digital</a>
-                        <a href="donation.html" class="nav-item nav-link">Publicaciones</a>
-                        <div class="nav-item dropdown">
-                            <a href="#!" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Sobre nosotros</a>
-                            <div class="dropdown-menu bg-light m-0">
-                                <a href="event.html" class="dropdown-item">Eventos</a>
-                                <a href="feature.html" class="dropdown-item">Mision y vision</a>
-                                <a href="team.html" class="dropdown-item">Nuestro Equipo</a>
-                                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                <a href="404.html" class="dropdown-item">404 Page</a>
-                            </div>
-                        </div>
-                        <a href="contact.html" class="nav-item nav-link">Coordinaciones
-                    </div>
-                    <div class="d-none d-lg-flex ms-auto">
-                        <a class="btn btn-square btn-dark ms-2" href="#!"><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-dark ms-2" href="https://www.facebook.com/upn271tabasco/?locale=es_LA"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-dark ms-2" href="#!"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </div>
+    <!--Navbar Start -->
+    <div id="navbar"></div>
     <!-- Navbar End -->
 
-
     <!-- titulo de pagina -->
-    <div class="container-fluid page-header py-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center py-4">
-            <h1 class="display-3 animated slideInDown">Repositorios academicos.</h1>
-            <nav aria-label="breadcrumb animated slideInDown">
-                <ol class="breadcrumb justify-content-center mb-0">
-                    <li class="breadcrumb-item"><a href="#!">Inicio</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Biblioteca Digital</li>
-                </ol>
-            </nav>
-        </div>
+    <div
+      class="container-fluid page-header py-5 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container text-center py-4">
+        <h1 class="display-3 animated slideInDown">Repositorios academicos.</h1>
+        <nav aria-label="breadcrumb animated slideInDown">
+          <ol class="breadcrumb justify-content-center mb-0">
+            <li class="breadcrumb-item"><a href="#!">Inicio</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Biblioteca Digital
+            </li>
+          </ol>
+        </nav>
+      </div>
     </div>
     <!-- Page Header End -->
 
-
     <!-- Servicio de biblioteca -->
     <div class="container-fluid py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-md-12 col-lg-4 col-xl-3 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="biblioteca-title">
-                        <h1 class="display-6 mb-4">¿Qué son los repositorios academicos?</h1>
-                        <p class="fs-5 mb-0">Un repositorio académico es un espacio digital donde se almacenan y organizan trabajos científicos y educativos para que estudiantes, profesores e investigadores puedan consultarlos fácilmente.
-
-Ahí se encuentran materiales como:
-artículos científicos,
-
-tesis y trabajos de investigación,
-
-datos estadísticos y censos,
-
-informes técnicos,
-
-libros académicos y capítulos.
-
-Su objetivo principal es difundir conocimiento confiable y permitir que la información esté disponible para el aprendizaje y la investigación.</p>
-                    </div>
-                </div>
-                <div class="col-md-12 col-lg-8 col-xl-9">
-                    <div class="row g-5">
-
-                         <!-- documento 1-->
-                             <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.1s">
-                         <div class="biblioteca-item h-100">
-
-                          <div class="btn-square bg-light mb-4 d-flex justify-content-center align-items-center">
-                            <img class="icono-item" alt="icono">
-                         </div>
-
-                         <h3>GOOGLE SCHOLAR</h3>
-                            <p class="mb-2">El buscador académico más conocido de Google. Indexa artículos, tesis, libros, etc.</p>
-
-                            <a href="https://scholar.google.com/?hl=es" class="link-destino">Ingresa aqui.</a>
-
-                         </div>
-                        </div>
-
-
-
-                         <!-- documento 2-->
-                              <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.1s">
-                         <div class="biblioteca-item h-100">
-
-                          <div class="btn-square bg-light mb-4 d-flex justify-content-center align-items-center">
-                            <img class="icono-item" alt="icono">
-                         </div>
-
-                         <h3>SSRN</h3>
-                            <p class="mb-2">Muy usado en economía, derecho, política y ciencias sociales.</p>
-
-                            <a href="https://www.ssrn.com/" class="link-destino">Ingresa aqui.</a>
-
-                         </div>
-                        </div>
-
-
-
-                         <!-- documento 3 -->
-                              <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.1s">
-                         <div class="biblioteca-item h-100">
-
-                          <div class="btn-square bg-light mb-4 d-flex justify-content-center align-items-center">
-                            <img class="icono-item" alt="icono">
-                         </div>
-
-                         <h3>LA Referencia</h3>
-                            <p class="mb-2">Red latinoamericana de repositorios científicos.</p>
-
-                            <a href="https://www.lareferencia.info/" class="link-destino">Ingresa aqui.</a>
-
-                         </div>
-                        </div>
-
-
-
-                        <!-- documento 4 -->
-                              <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.1s">
-                         <div class="biblioteca-item h-100">
-
-                          <div class="btn-square bg-light mb-4 d-flex justify-content-center align-items-center">
-                            <img class="icono-item" alt="icono">
-                         </div>
-
-                         <h3>BASE</h3>
-                            <p class="mb-2">Mega buscador académico mundial de repositorios open access.</p>
-
-                            <a href="https://www.base-search.net" class="link-destino">Ingresa aqui.</a>
-
-                         </div>
-                        </div>
-
-
-
-                        <!-- cocumento 5 -->
-                                <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.1s">
-                         <div class="biblioteca-item h-100">
-
-                          <div class="btn-square bg-light mb-4 d-flex justify-content-center align-items-center">
-                            <img class="icono-item" alt="icono">
-                         </div>
-
-                         <h3>Datos Abiertos México</h3>
-                            <p class="mb-2">Portal del gobierno con miles de bases de datos descargables.</p>
-
-                            <a href="https://www.datos.gob.mx/?utm_source=chatgpt.com" class="link-destino">Ingresa aqui.</a>
-
-                         </div>
-                        </div>
-
-
-
-
-                        <!-- documento 6 -->
-                               <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.1s">
-                         <div class="biblioteca-item h-100">
-
-                          <div class="btn-square bg-light mb-4 d-flex justify-content-center align-items-center">
-                            <img class="icono-item" alt="icono">
-                         </div>
-
-                         <h3>INEGI </h3>
-                            <p class="mb-2">Fuente oficial de estadísticas mexicanas.</p>
-
-                            <a href="https://www.inegi.org.mx/" class="link-destino">Ingresa aqui.</a>
-
-                         </div>
-                        </div>
-                        
-                        
-                        <!-- documento 8 -->
-                               <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.1s">
-                         <div class="biblioteca-item h-100">
-
-                          <div class="btn-square bg-light mb-4 d-flex justify-content-center align-items-center">
-                            <img class="icono-item" alt="icono">
-                         </div>
-
-                         <h3> Repositorio Nacional CONAHCYT</h3>
-                            <p class="mb-2">Repositorio científico nacional (antes CONACYT).</p>
-
-                            <a href="https://www.repositorionacionalconahcyt.mx" class="link-destino">Ingresa aqui.</a>
-
-                         </div>
-                        </div>
-                        <!-- documento 9 -->
-                                <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.1s">
-                         <div class="biblioteca-item h-100">
-
-                          <div class="btn-square bg-light mb-4 d-flex justify-content-center align-items-center">
-                            <img class="icono-item" alt="icono">
-                         </div>
-
-                         <h3>Repositorio Institucional UNAM</h3>
-                            <p class="mb-2">Repositorio OFICIAL de la UNAM.</p>
-
-                            <a href="https://ru.dgb.unam.mx/" class="link-destino">Ingresa aqui.</a>
-
-                         </div>
-                        </div>
-
-                        <!-- documento 10 -->
-                                <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.1s">
-                         <div class="biblioteca-item h-100">
-
-                          <div class="btn-square bg-light mb-4 d-flex justify-content-center align-items-center">
-                            <img class="icono-item" alt="icono">
-                         </div>
-
-                         <h3>DIALNET </h3>
-                            <p class="mb-2">Portal académico español muy usado en universidades hispanohablantes.</p>
-
-                            <a href="https://dialnet.unirioja.es/?utm_source=chatgpt.com" class="link-destino">Ingresa aqui.</a>
-
-                         </div>
-                        </div>
-
-                        <!-- documento 11 -->
-                        <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.1s">
-                         <div class="biblioteca-item h-100">
-
-                          <div class="btn-square bg-light mb-4 d-flex justify-content-center align-items-center">
-                            <img class="icono-item" alt="icono">
-                         </div>
-
-                         <h3>   sCIELO MÉXICO</h3>
-                            <p class="mb-2">Biblioteca digital con revistas científicas mexicanas revisadas por pares.</p>
-
-                            <a href="https://www.scielo.org.mx/?utm_source=chatgpt.com" class="link-destino">Ingresa aqui.</a>
-
-                         </div>
-                        </div>
-
-                        <!-- documento 12 -->
-                        <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.1s">
-                         <div class="biblioteca-item h-100">
-
-                          <div class="btn-square bg-light mb-4 d-flex justify-content-center align-items-center">
-                            <img class="icono-item" alt="icono">
-                         </div>
-
-                         <h3>REDALYC</h3>
-                            <p class="mb-2">Uno de los mejores repositorios de América Latina. Incluye revistas científicas en español de universidades mexicanas y latinoamericanas.</p>
-
-                            <a href="https://www.redalyc.org/" class="link-destino">Ingresa aqui.</a>
-
-                         </div>
-                        </div>
-
-
-                        <!-- documento 13 -->
-                        <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.1s">
-                         <div class="biblioteca-item h-100">
-
-                          <div class="btn-square bg-light mb-4 d-flex justify-content-center align-items-center">
-                            <img class="icono-item" alt="icono">
-                         </div>
-
-                         <h3>CLACSO</h3>
-                            <p class="mb-2">biblioteca digital del Consejo Latinoamericano de Ciencias Sociales, una red académica internacional que reúne investigaciones de universidades y centros de estudio de toda América Latina.</p>
-
-                            <a href="https://biblioteca-repositorio.clacso.edu.ar/" class="link-destino">Ingresa aqui.</a>
-
-                         </div>
-                        </div>
-
-
-
-
-
-
-                    </div>
-                </div>
+      <div class="container">
+        <div class="row g-5">
+          <div
+            class="col-md-12 col-lg-4 col-xl-3 wow fadeIn"
+            data-wow-delay="0.1s"
+          >
+            <div class="biblioteca-title">
+              <h1 class="display-6 mb-4">
+                ¿Qué son los repositorios academicos?
+              </h1>
+              <p class="fs-5 mb-0">
+                Un repositorio académico es un espacio digital donde se
+                almacenan y organizan trabajos científicos y educativos para que
+                estudiantes, profesores e investigadores puedan consultarlos
+                fácilmente. Ahí se encuentran materiales como: artículos
+                científicos, tesis y trabajos de investigación, datos
+                estadísticos y censos, informes técnicos, libros académicos y
+                capítulos. Su objetivo principal es difundir conocimiento
+                confiable y permitir que la información esté disponible para el
+                aprendizaje y la investigación.
+              </p>
             </div>
+          </div>
+          <div class="col-md-12 col-lg-8 col-xl-9">
+            <div class="row g-5">
+              <!-- documento 1-->
+              <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.1s">
+                <div class="biblioteca-item h-100">
+                  <div
+                    class="btn-square bg-light mb-4 d-flex justify-content-center align-items-center"
+                  >
+                    <img class="icono-item" alt="icono" />
+                  </div>
+
+                  <h3>GOOGLE SCHOLAR</h3>
+                  <p class="mb-2">
+                    El buscador académico más conocido de Google. Indexa
+                    artículos, tesis, libros, etc.
+                  </p>
+
+                  <a
+                    href="https://scholar.google.com/?hl=es"
+                    class="link-destino"
+                    >Ver más.</a
+                  >
+                </div>
+              </div>
+
+              <!-- documento 2-->
+              <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.1s">
+                <div class="biblioteca-item h-100">
+                  <div
+                    class="btn-square bg-light mb-4 d-flex justify-content-center align-items-center"
+                  >
+                    <img class="icono-item" alt="icono" />
+                  </div>
+
+                  <h3>SSRN</h3>
+                  <p class="mb-2">
+                    Muy usado en economía, derecho, política y ciencias
+                    sociales.
+                  </p>
+
+                  <a href="https://www.ssrn.com/" class="link-destino"
+                    >Ver más.</a
+                  >
+                </div>
+              </div>
+
+              <!-- documento 3 -->
+              <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.1s">
+                <div class="biblioteca-item h-100">
+                  <div
+                    class="btn-square bg-light mb-4 d-flex justify-content-center align-items-center"
+                  >
+                    <img class="icono-item" alt="icono" />
+                  </div>
+
+                  <h3>LA Referencia</h3>
+                  <p class="mb-2">
+                    Red latinoamericana de repositorios científicos.
+                  </p>
+
+                  <a href="https://www.lareferencia.info/" class="link-destino"
+                    >Ver más.</a
+                  >
+                </div>
+              </div>
+
+              <!-- documento 4 -->
+              <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.1s">
+                <div class="biblioteca-item h-100">
+                  <div
+                    class="btn-square bg-light mb-4 d-flex justify-content-center align-items-center"
+                  >
+                    <img class="icono-item" alt="icono" />
+                  </div>
+
+                  <h3>BASE</h3>
+                  <p class="mb-2">
+                    Mega buscador académico mundial de repositorios open access.
+                  </p>
+
+                  <a href="https://www.base-search.net" class="link-destino"
+                    >Ver más.</a
+                  >
+                </div>
+              </div>
+
+              <!-- cocumento 5 -->
+              <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.1s">
+                <div class="biblioteca-item h-100">
+                  <div
+                    class="btn-square bg-light mb-4 d-flex justify-content-center align-items-center"
+                  >
+                    <img class="icono-item" alt="icono" />
+                  </div>
+
+                  <h3>Datos Abiertos México</h3>
+                  <p class="mb-2">
+                    Portal del gobierno con miles de bases de datos
+                    descargables.
+                  </p>
+
+                  <a
+                    href="https://www.datos.gob.mx/?utm_source=chatgpt.com"
+                    class="link-destino"
+                    >Ver más.</a
+                  >
+                </div>
+              </div>
+
+              <!-- documento 6 -->
+              <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.1s">
+                <div class="biblioteca-item h-100">
+                  <div
+                    class="btn-square bg-light mb-4 d-flex justify-content-center align-items-center"
+                  >
+                    <img class="icono-item" alt="icono" />
+                  </div>
+
+                  <h3>INEGI</h3>
+                  <p class="mb-2">Fuente oficial de estadísticas mexicanas.</p>
+
+                  <a href="https://www.inegi.org.mx/" class="link-destino"
+                    >Ver más.</a
+                  >
+                </div>
+              </div>
+
+              <!-- documento 8 -->
+              <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.1s">
+                <div class="biblioteca-item h-100">
+                  <div
+                    class="btn-square bg-light mb-4 d-flex justify-content-center align-items-center"
+                  >
+                    <img class="icono-item" alt="icono" />
+                  </div>
+
+                  <h3>Repositorio Nacional CONAHCYT</h3>
+                  <p class="mb-2">
+                    Repositorio científico nacional (antes CONACYT).
+                  </p>
+
+                  <a
+                    href="https://www.repositorionacionalconahcyt.mx"
+                    class="link-destino"
+                    >Ver más.</a
+                  >
+                </div>
+              </div>
+              <!-- documento 9 -->
+              <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.1s">
+                <div class="biblioteca-item h-100">
+                  <div
+                    class="btn-square bg-light mb-4 d-flex justify-content-center align-items-center"
+                  >
+                    <img class="icono-item" alt="icono" />
+                  </div>
+
+                  <h3>Repositorio Institucional UNAM</h3>
+                  <p class="mb-2">Repositorio OFICIAL de la UNAM.</p>
+
+                  <a href="https://ru.dgb.unam.mx/" class="link-destino"
+                    >Ver más.</a
+                  >
+                </div>
+              </div>
+
+              <!-- documento 10 -->
+              <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.1s">
+                <div class="biblioteca-item h-100">
+                  <div
+                    class="btn-square bg-light mb-4 d-flex justify-content-center align-items-center"
+                  >
+                    <img class="icono-item" alt="icono" />
+                  </div>
+
+                  <h3>DIALNET</h3>
+                  <p class="mb-2">
+                    Portal académico español muy usado en universidades
+                    hispanohablantes.
+                  </p>
+
+                  <a
+                    href="https://dialnet.unirioja.es/?utm_source=chatgpt.com"
+                    class="link-destino"
+                    >Ver más.</a
+                  >
+                </div>
+              </div>
+
+              <!-- documento 11 -->
+              <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.1s">
+                <div class="biblioteca-item h-100">
+                  <div
+                    class="btn-square bg-light mb-4 d-flex justify-content-center align-items-center"
+                  >
+                    <img class="icono-item" alt="icono" />
+                  </div>
+
+                  <h3>sCIELO MÉXICO</h3>
+                  <p class="mb-2">
+                    Biblioteca digital con revistas científicas mexicanas
+                    revisadas por pares.
+                  </p>
+
+                  <a
+                    href="https://www.scielo.org.mx/?utm_source=chatgpt.com"
+                    class="link-destino"
+                    >Ver más.</a
+                  >
+                </div>
+              </div>
+
+              <!-- documento 12 -->
+              <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.1s">
+                <div class="biblioteca-item h-100">
+                  <div
+                    class="btn-square bg-light mb-4 d-flex justify-content-center align-items-center"
+                  >
+                    <img class="icono-item" alt="icono" />
+                  </div>
+
+                  <h3>REDALYC</h3>
+                  <p class="mb-2">
+                    Uno de los mejores repositorios de América Latina. Incluye
+                    revistas científicas en español de universidades mexicanas y
+                    latinoamericanas.
+                  </p>
+
+                  <a href="https://www.redalyc.org/" class="link-destino"
+                    >Ver más.</a
+                  >
+                </div>
+              </div>
+
+              <!-- documento 13 -->
+              <div class="col-sm-6 col-md-4 wow fadeIn" data-wow-delay="0.1s">
+                <div class="biblioteca-item h-100">
+                  <div
+                    class="btn-square bg-light mb-4 d-flex justify-content-center align-items-center"
+                  >
+                    <img class="icono-item" alt="icono" />
+                  </div>
+
+                  <h3>CLACSO</h3>
+                  <p class="mb-2">
+                    biblioteca digital del Consejo Latinoamericano de Ciencias
+                    Sociales, una red académica internacional que reúne
+                    investigaciones de universidades y centros de estudio de
+                    toda América Latina.
+                  </p>
+
+                  <a
+                    href="https://biblioteca-repositorio.clacso.edu.ar/"
+                    class="link-destino"
+                    >Ver más.</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
     <!-- biblioteca End -->
 
-
-    
-
-
     <!-- Footer Start -->
-    <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="row g-5 py-5">
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Administrativo</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Calle Rio Usumacinta 112 Col. Casa blanca 1ra Secc.</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>(+52)99 33 12 42 60</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>upn271@upntabasco.edu.mx</p>
-                    <div class="d-flex pt-3">
-                        <a class="btn btn-square btn-primary me-2" href="#!"><i class="fab fa-x-twitter"></i></a>
-                        <a class="btn btn-square btn-primary me-2" href="#!"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-primary me-2" href="#!"><i class="fab fa-youtube"></i></a>
-                       
-                    </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Horario de atención</h4>
-                    <p class="mb-1">Lunes - Viernes</p>
-                    <h6 class="text-light">07:00 am - 07:00 pm</h6>
-                    <p class="mb-1">Sabado</p>
-                    <h6 class="text-light">07:00 am - 3:30 pm</h6>
-                    <p class="mb-1">Domingo</p>
-                    <h6 class="text-light">Cerrado</h6>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Galeria</h4>
-                    <div class="row g-2">
-                        <div class="col-4">
-                            <img class="img-fluid w-100" src="img/upn-1.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid w-100" src="img/upn-2.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid w-100" src="img/upn-9.jpeg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid w-100" src="img/upn-5.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid w-100" src="img/upn-4.jpeg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid w-100" src="img/gallery-6.jpg" alt="">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright pt-5">
-                <div class="row">
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                        &copy; <a class="fw-semi-bold" href="#!">UPN 271</a>, All Right Reserved.
-                    </div>
-                   
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
-
-
-    <!-- Back to Top -->
-    <a href="#!" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-
+    <footer id="footer"></footer>
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -529,24 +381,19 @@ Su objetivo principal es difundir conocimiento confiable y permitir que la infor
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 
-
     <script>
-document.querySelectorAll(".biblioteca-item").forEach(item => {
-    
-    const link = item.querySelector(".link-destino")?.href;
-    const img = item.querySelector(".icono-item");
+      document.querySelectorAll(".biblioteca-item").forEach((item) => {
+        const link = item.querySelector(".link-destino")?.href;
+        const img = item.querySelector(".icono-item");
 
-    if (link && img) {
-        // Extraer dominio
-        const dominio = new URL(link).hostname;
+        if (link && img) {
+          // Extraer dominio
+          const dominio = new URL(link).hostname;
 
-        // Usar favicon de Google
-        img.src = `https://www.google.com/s2/favicons?sz=128&domain=${dominio}`;
-    }
-
-});
-</script>
-
-</body>
-
+          // Usar favicon de Google
+          img.src = `https://www.google.com/s2/favicons?sz=128&domain=${dominio}`;
+        }
+      });
+    </script>
+  </body>
 </html>

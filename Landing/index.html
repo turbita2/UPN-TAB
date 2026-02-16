@@ -737,5 +737,21 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+     <script src="js/main.js"></script>
+
+    <script>
+      document.querySelectorAll(".biblioteca-item").forEach((item) => {
+        const link = item.querySelector(".link-destino")?.href;
+        const img = item.querySelector(".icono-item");
+
+        if (link && img) {
+          // Extraer dominio
+          const dominio = new URL(link).hostname;
+
+          // Usar favicon de Google
+          img.src = `https://www.google.com/s2/favicons?sz=128&domain=${dominio}`;
+        }
+      });
+    </script>
   </body>
 </html>

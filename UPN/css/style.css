@@ -660,3 +660,199 @@
   background-color: #00e5ff;
   color: #ffffff;
 }
+
+/* ========================================= */
+/* ESTILOS CARRUSEL GOOGLE DRIVE (AÑADIDO)   */
+/* ========================================= */
+
+.pdf-carousel-wrapper {
+    position: relative;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    height: 450px;
+    max-width: 800px;
+    overflow: hidden;
+}
+
+.pdf-carousel-slide {
+    display: flex;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.pdf-slide-item {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.pdf-slide-item img {
+    max-height: 75%;
+    max-width: 85%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.pdf-slide-item:hover img {
+    transform: scale(1.03);
+}
+
+.pdf-label {
+    margin-top: 15px;
+    padding: 8px 20px;
+    background: var(--bs-primary); /* Usa el color azul de tu plantilla */
+    color: white;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    max-width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pdf-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    color: var(--bs-dark);
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.pdf-nav-btn:hover {
+    background: var(--bs-primary);
+    color: white;
+}
+
+#pdf-prevBtn { left: 15px; }
+#pdf-nextBtn { right: 15px; }
+
+.pdf-carousel-dots {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.pdf-dot {
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pdf-dot.active {
+    background: var(--bs-primary);
+    width: 25px;
+    border-radius: 10px;
+}
+
+.pdf-loader {
+    position: absolute;
+    top: 50%; left: 50%;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid var(--bs-primary);
+    border-radius: 50%;
+    width: 40px; height: 40px;
+    animation: pdf-spin 1s linear infinite;
+    /* Ajuste para centrar correctamente el loader */
+    margin-top: -20px; 
+    margin-left: -20px;
+}
+
+@keyframes pdf-spin { 
+    0% { transform: rotate(0deg); } 
+    100% { transform: rotate(360deg); } 
+}
+
+/* ========================================= */
+/* ESTILOS LISTA BUSCADOR PDFs               */
+/* ========================================= */
+
+.pdf-list-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    background: #fff;
+    height: 100%;
+    overflow: hidden;
+}
+
+.pdf-list-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.pdf-list-img-container {
+    height: 200px;
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.pdf-list-img-container img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.pdf-list-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--bs-dark);
+    margin-bottom: 5px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.pdf-list-desc {
+    font-size: 0.85rem;
+    color: var(--bs-tertiary);
+}
+
+/* ========================================= */
+/* ESTILOS PAGINACIÓN PDFs                   */
+/* ========================================= */
+.page-link {
+    color: var(--bs-primary);
+    cursor: pointer;
+    box-shadow: none !important;
+}
+
+.page-item.active .page-link {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    color: white;
+}
+
+.page-link:hover {
+    background-color: #f8f9fa;
+    color: var(--bs-primary);
+}

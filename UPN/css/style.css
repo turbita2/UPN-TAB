@@ -856,3 +856,158 @@
     background-color: #f8f9fa;
     color: var(--bs-primary);
 }
+
+/* ========================================= */
+/* CARRUSEL GALERÍA DIRECCIÓN ESCOLAR        */
+/* ========================================= */
+
+.direccion-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: 520px;
+    margin: 60px auto;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    background: #000;
+}
+
+.direccion-slides {
+    display: flex;
+    height: 100%;
+    transition: transform 0.7s cubic-bezier(.77,0,.18,1);
+}
+
+.direccion-slide {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.direccion-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* muestra la imagen completa */
+    background: #000; /* relleno si la imagen no llena el espacio */
+}
+
+/* Texto sobre la imagen */
+.descripcion{
+    max-width:700px;
+    margin:20px auto 40px auto;
+    text-align:center;
+    font-size:18px;
+    color:var(--bs-tertiary);
+    line-height:1.6;
+}
+.direccion-caption {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    background: rgba(0,0,0,0.55);
+    padding: 15px 25px;
+    border-radius: 8px;
+    color: white;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+/* Botones */
+
+.direccion-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.85);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--bs-dark);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
+    z-index: 10;
+}
+
+.direccion-btn:hover {
+    background: var(--bs-primary);
+    color: white;
+}
+
+#dir-prev {
+    left: 20px;
+}
+
+#dir-next {
+    right: 20px;
+}
+
+/* Indicadores */
+
+.direccion-dots {
+    position: absolute;
+    bottom: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.direccion-dot {
+    width: 10px;
+    height: 10px;
+    background: rgba(255,255,255,0.6);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.direccion-dot.active {
+    background: var(--bs-primary);
+    width: 25px;
+    border-radius: 10px;
+}
+
+/* Responsive */
+
+@media (max-width:768px){
+
+    .direccion-carousel{
+        height:350px;
+    }
+
+    .direccion-caption{
+        font-size:16px;
+        left:20px;
+        bottom:20px;
+    }
+
+}
+
+/* ========================================= */
+/* ORGANIGRAMA UPN                           */
+/* ========================================= */
+
+.organigrama-wrapper{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    margin-top:40px;
+    margin-bottom:60px;
+}
+
+.organigrama-img{
+    max-width:900px;
+    width:100%;
+    height:auto;
+    border-radius:12px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+.organigrama-img:hover{
+    transform:scale(1.02);
+}

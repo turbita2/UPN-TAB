@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>UPN Tabasco</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="keywords" />
+    <meta content="" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600;700&family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icon Font Stylesheet -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet" />
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet" />
+
+    <style></style>
+  </head>
+
+  <body>
+    <!-- Spinner Start -->
+    <div
+      id="spinner"
+      class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center"
+    >
+      <div
+        class="spinner-border text-primary"
+        role="status"
+        style="width: 3rem; height: 3rem"
+      ></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!--Navbar inicio -->
+    <div id="navbar"></div>
+    <!-- Navbar final -->
+
+     <!-- Titulo de pagina-->
+    <div
+      class="container-fluid page-header py-5 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container text-center py-4">
+        <h1 class="display-3 animated slideInDown">
+          Administracion
+        </h1>
+        <nav aria-label="breadcrumb animated slideInDown"></nav>
+      </div>
+    </div>
+
+    
+     <section class="contenedor">
+<h2></h2>
+    <p class="descripcion">
+        Conoce las instalaciones de la dirección donde se gestionan los procesos
+        administrativos y se brinda atención a estudiantes y docentes.
+
+    Horario de atencion: 7:00 - 19:00
+    </p>
+
+<div class="direccion-carousel">
+
+    <div class="direccion-slides">
+
+        <div class="direccion-slide">
+            <img src="img/CROQUIS UPN 271.png">
+            <div class="direccion-caption"></div>
+        </div>
+
+      
+
+        <div class="direccion-slide">
+            <img src="img/upn-direccion (5).jpeg">
+            <div class="direccion-caption"></div>
+        </div>
+
+        <div class="direccion-slide">
+            <img src="img/upn-direccion (6).jpeg">
+            <div class="direccion-caption">s</div>
+        </div>
+        
+        <div class="direccion-slide">
+            <img src="img/upn-direccion (9).jpeg">
+            <div class="direccion-caption"></div>
+        </div>
+
+        <div class="direccion-slide">
+            <img src="img/upn-direccion (8).jpeg">
+            <div class="direccion-caption"></div>
+        </div>
+
+        <div class="direccion-slide">
+            <img src="img/upn-direccion (4).jpeg">
+            <div class="direccion-caption"></div>
+        </div>
+
+        <div class="direccion-slide">
+            <img src="img/upn-direccion (10).jpeg">
+            <div class="direccion-caption"></div>
+        </div>
+
+        <div class="direccion-slide">
+            <img src="img/upn-direccion (11).jpeg">
+            <div class="direccion-caption"></div>
+        </div>
+        
+        <div class="direccion-slide">
+            <img src="img/upn-direccion (13).jpeg">
+            <div class="direccion-caption">s</div>
+        </div>
+
+
+    </div>
+
+    <button class="direccion-btn" id="dir-prev">&#10094;</button>
+    <button class="direccion-btn" id="dir-next">&#10095;</button>
+
+    <div class="direccion-dots"></div>
+
+</div>
+<h2 class="section-title text-center w-100">ORGANIGRAMA UPN 271</h2>
+
+<div class="organigrama-wrapper">
+
+    <a href="#" target="_blank">
+        <img src="img/organigrama UPN 271.png" class="organigrama-img">
+    </a>
+
+</div>
+</section>
+
+<script src="script.js"></script>
+
+ <!-- Footer Start -->
+    <footer id="footer"></footer>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <script>
+      document.querySelectorAll(".biblioteca-item").forEach((item) => {
+        const link = item.querySelector(".link-destino")?.href;
+        const img = item.querySelector(".icono-item");
+
+        if (link && img) {
+          // Extraer dominio
+          const dominio = new URL(link).hostname;
+
+          // Usar favicon de Google
+          img.src = `https://www.google.com/s2/favicons?sz=128&domain=${dominio}`;
+        }
+      });
+    </script>
+  </body>
+</html>
+

@@ -324,3 +324,86 @@ document.getElementById('pdf-search')?.addEventListener('input', (e) => {
 // ¡AQUÍ ESTÁ LA LLAVE! INICIAR LA FUNCIÓN
 // =========================================
 cargarContenidoDrive();
+
+
+// =========================================
+// CARRUSEL DE FOTOS DE DIRECCION
+// =========================================
+
+
+const slides = document.querySelector(".direccion-slides");
+const slide = document.querySelectorAll(".direccion-slide");
+
+const prev = document.getElementById("dir-prev");
+const next = document.getElementById("dir-next");
+
+const dotsContainer = document.querySelector(".direccion-dots");
+
+let index = 0;
+
+/* Crear indicadores */
+
+slide.forEach((_, i) => {
+
+    const dot = document.createElement("div");
+    dot.classList.add("direccion-dot");
+
+    if(i === 0) dot.classList.add("active");
+
+    dot.addEventListener("click", () => {
+        index = i;
+        updateCarousel();
+    });
+
+    dotsContainer.appendChild(dot);
+
+});
+
+const dots = document.querySelectorAll(".direccion-dot");
+
+function updateCarousel(){
+
+    slides.style.transform = `translateX(-${index * 100}%)`;
+
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[index].classList.add("active");
+
+}
+
+next.addEventListener("click", () => {
+
+    index++;
+
+    if(index >= slide.length){
+        index = 0;
+    }
+
+    updateCarousel();
+
+});
+
+prev.addEventListener("click", () => {
+
+    index--;
+
+    if(index < 0){
+        index = slide.length - 1;
+    }
+
+    updateCarousel();
+
+});
+
+/* Auto carrusel */
+
+setInterval(()=>{
+
+    index++;
+
+    if(index >= slide.length){
+        index = 0;
+    }
+
+    updateCarousel();
+
+},5000);
